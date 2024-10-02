@@ -1,0 +1,7 @@
+src/*.zip
+src/*.tar
+*.tar
+*.zip
+.idea/
+out/*
+*.iml
