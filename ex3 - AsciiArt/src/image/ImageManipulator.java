@@ -76,6 +76,12 @@ public class ImageManipulator {
             throw new IllegalArgumentException(START_MESSAGE_INVALID_RESOLUTION + resolution);
         }
 
+        /**
+         * Calculates dimensions: squareEdge is the size of each square sub-image (width/resolution),
+         * and sizeHeightSplitedImage is how many rows of squares we'll need (height/squareEdge).
+         * For example: a 300x200 image with resolution 3 creates 100x100 squares arranged in a 2x3 grid
+         */
+        
         int squareEdge = image.getWidth() / resolution;
         int sizeHeightSplitedImage = image.getHeight() / squareEdge;
 
@@ -106,12 +112,7 @@ public class ImageManipulator {
         if (resolution > image.getWidth()) {
             return false;
         }
-
-        /**
-         * Calculates dimensions: squareEdge is the size of each square sub-image (width/resolution),
-         * and sizeHeightSplitedImage is how many rows of squares we'll need (height/squareEdge).
-         * For example: a 300x200 image with resolution 3 creates 100x100 squares arranged in a 2x3 grid
-         */
+        
         
         int squareEdge = image.getWidth() / resolution;
         int sizeHeightSplitedImage = image.getHeight() / squareEdge;
