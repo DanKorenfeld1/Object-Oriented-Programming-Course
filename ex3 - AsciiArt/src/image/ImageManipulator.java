@@ -44,7 +44,12 @@ public class ImageManipulator {
                 colorArray[row][col] = Color.WHITE;
             }
         }
-
+        
+        /** 
+         * This part is responsible for copying the original image to the center of the new array we created
+         * Calculate how many pixels should be added to each side to center the image.
+         */
+            
         int padHeight = (newHeight - image.getHeight()) / 2;
         int padWidth = (newWidth - image.getWidth()) / 2;
 
